@@ -1,10 +1,7 @@
 -- EDA
 
--- Here we are jsut going to explore the data and find trends or patterns or anything interesting like outliers
+-- Here I am just going to explore the data and find trends or patterns or anything interesting like outliers
 
--- normally when you start the EDA process you have some idea of what you're looking for
-
--- with this info we are just going to look around and see what we find!
 
 SELECT * 
 FROM layoffs_staging2;
@@ -20,7 +17,7 @@ SELECT MAX(percentage_laid_off),  MIN(percentage_laid_off)
 FROM world_layoffs.layoffs_staging2
 WHERE  percentage_laid_off IS NOT NULL;
 
--- Which companies had 1 which is basically 100 percent of they company laid off
+-- Which companies had 1 which is basically 100 percent of the company laid off
 SELECT *
 FROM world_layoffs.layoffs_staging2
 WHERE  percentage_laid_off = 1;
@@ -31,7 +28,6 @@ SELECT *
 FROM world_layoffs.layoffs_staging2
 WHERE  percentage_laid_off = 1
 ORDER BY funds_raised_millions DESC;
--- BritishVolt looks like an EV company, Quibi! I recognize that company - wow raised like 2 billion dollars and went under - ouch
 
 
 
@@ -118,7 +114,7 @@ FROM layoffs_staging2
 GROUP BY dates
 ORDER BY dates ASC;
 
--- now use it in a CTE so we can query off of it
+-- now using it in a CTE so we can query off of it
 WITH DATE_CTE AS 
 (
 SELECT SUBSTRING(date,1,7) as dates, SUM(total_laid_off) AS total_laid_off
