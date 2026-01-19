@@ -126,6 +126,16 @@ SELECT dates, SUM(total_laid_off) OVER (ORDER BY dates ASC) as rolling_total_lay
 FROM DATE_CTE
 ORDER BY dates ASC;
 
+-- Layoffs by year
+
+SELECT YEAR(date) AS year,
+       SUM(total_laid_off) AS total_layoffs
+FROM layoffs_staging2
+WHERE date IS NOT NULL
+GROUP BY YEAR(date)
+ORDER BY year;
+
+
 
 
 
