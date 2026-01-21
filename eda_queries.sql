@@ -32,8 +32,6 @@ ORDER BY funds_raised_millions DESC;
 
 
 
-
-
 -- Companies with the biggest single Layoff
 SELECT company, total_laid_off
 FROM world_layoffs.layoffs_staging
