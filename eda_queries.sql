@@ -58,6 +58,8 @@ GROUP BY location
 ORDER BY 2 DESC
 LIMIT 10;
 
+
+
 -- this it total in the past 3 years or in the dataset
 
 SELECT country, SUM(total_laid_off)
