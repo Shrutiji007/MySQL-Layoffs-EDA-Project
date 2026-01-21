@@ -127,8 +127,8 @@ FROM DATE_CTE
 ORDER BY dates ASC;
 
 
--- Layoffs by year
 
+-- Layoffs by year
 SELECT YEAR(date) AS year,
        SUM(total_laid_off) AS total_layoffs
 FROM layoffs_staging2
