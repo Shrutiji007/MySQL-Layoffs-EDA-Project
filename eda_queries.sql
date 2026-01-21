@@ -107,7 +107,6 @@ ORDER BY years ASC, total_laid_off DESC;
 
 
 
-
 -- Rolling Total of Layoffs Per Month
 SELECT SUBSTRING(date,1,7) as dates, SUM(total_laid_off) AS total_laid_off
 FROM layoffs_staging2
