@@ -88,7 +88,6 @@ ORDER BY 2 DESC;
 
 -- Earlier we looked at Companies with the most Layoffs. Now let's look at that per year. 
 
-
 WITH Company_Year AS 
 (
   SELECT company, YEAR(date) AS years, SUM(total_laid_off) AS total_laid_off
