@@ -114,6 +114,7 @@ FROM layoffs_staging2
 GROUP BY dates
 ORDER BY dates ASC;
 
+
 -- now using it in a CTE so we can query off of it
 WITH DATE_CTE AS 
 (
